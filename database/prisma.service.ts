@@ -14,7 +14,7 @@ export class PrismaService {
 	async connect(): Promise<void> {
 		try {
 			await this.client.$connect();
-			this.logger.log('[PrismaService] Connect to db successfully');
+			this.logger.log('[PrismaService] Connecting to db was successful');
 		} catch (e) {
 			if (e instanceof Error) {
 				this.logger.error(`[PrismaService] Error connection ${e.message}`);
